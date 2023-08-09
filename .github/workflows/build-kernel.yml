@@ -92,6 +92,7 @@ jobs:
         fi
 
     - name: 下载Gcc-aosp编译器
+      if: env.METHOD == 'A'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         if [ ${{ env.ENABLE_GCC_ARM64 }} = true ]; then
