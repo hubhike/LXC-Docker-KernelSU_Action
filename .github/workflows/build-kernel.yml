@@ -119,11 +119,13 @@ jobs:
     - name: 开启KVM配置
       if: env.ENABLE_KVM == 'true'
       run: |
-         cd $GITHUB_WORKSPACE/kernel_workspace/android-kerne
-         echo "CONFIG_MODULES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }
-         echo "CONFIG_KPROBES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }
-         echo "CONFIG_HAVE_KPROBES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }
-         echo "CONFIG_KPROBE_EVENTS=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }
+         cd $GITHUB_WORKSPACE/kernel_workspace
+         echo "CONFIG_VIRTUALIZATION=y" >> android-kernel\arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+         echo "CONFIG_KVM=y" >> android-kernel\arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+         echo "CONFIG_VHOST_NET=y" >> android-kernel\arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+         echo "CONFIG_VHOST_CROSS_ENDIAN_LEGACY=y" >> android-kernel\arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+         
+         
     - name: 开启lxc和docker配置
       if: env.LXC_DOCKER == 'true'
       run: |
