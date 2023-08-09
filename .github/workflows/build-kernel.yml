@@ -234,7 +234,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         sed -i "s/CONFIG_CC_STACKPROTECTOR_STRONG=y/# CONFIG_CC_STACKPROTECTOR_STRONG is not set/g" arch/arm64/configs/${{ env.KERNEL_CONFIG }}
-        wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/clangfix2.sh
+        wget https://github.com/wu17481748/LXC-DOCKER-KernelSU_Action/releases/download/%E9%99%84%E4%BB%B6/clangfix2.sh
         chmod u+x clangfix2.sh
         ./clangfix2.sh
         export PATH=$GITHUB_WORKSPACE/kernel_workspace/clang-aosp/bin:$PATH
