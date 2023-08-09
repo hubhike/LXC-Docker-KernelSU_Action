@@ -92,7 +92,7 @@ jobs:
         fi
 
     - name: 下载Gcc-aosp编译器
-      if: env.METHOD_OK == 'true'
+      if: env.METHOD_OK == 'A'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         if [ ${{ env.ENABLE_GCC_ARM64 }} = true ]; then
@@ -213,7 +213,7 @@ jobs:
         max-size: 2G
 
     - name: 开始A方案编译内核
-      if: env.METHOD_OK == 'true'
+      if: env.METHOD_OK == 'A'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         export PATH=$GITHUB_WORKSPACE/kernel_workspace/clang-aosp/bin:$PATH
@@ -230,7 +230,7 @@ jobs:
         
         
     - name: 开始B方案编译内核
-      if: env.METHOD_OK == 'false'
+      if: env.METHOD_OK == 'B'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         export PATH=$GITHUB_WORKSPACE/kernel_workspace/clang-aosp/bin:$PATH
