@@ -187,7 +187,7 @@ jobs:
         curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s ${{ env.KERNELSU_TAG }}
         echo "UPLOADNAME=-KernelSU" >> $GITHUB_ENV
 
-    - name: 开启KUS补充内核配置
+    - name: 开启KSU补充内核配置
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         if [ ${{ env.ADD_KPROBES_CONFIG }} = true ]; then
@@ -225,9 +225,9 @@ jobs:
         export KBUILD_BUILD_USER=$(echo ${{ github.actor }} | tr A-Z a-z)
         make -j$(nproc --all) CC=clang O=out ARCH=${{ env.ARCH }} ${{ env.KERNEL_CONFIG }}
         if [ ${{ env.ENABLE_CCACHE }} = true ]; then
-            make -j$(nproc --all) CC="ccache clang" O=out ARCH=${{ env.ARCH }} ${{ env.GCC_64 }} ${{ env.GCC_32 }} ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }}
+            make -j$(nproc --all) CC="ccache clang" O=out ARCH=${{ env.ARCH }} ${{ env.GCC_64 }} ${{ env.GCC_32 }} ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }} ${{ env.EXTRA_CMDT }} ${{ env.EXTRA_CMDU }}
         else
-            make -j$(nproc --all) CC=clang O=out ARCH=${{ env.ARCH }} ${{ env.GCC_64 }} ${{ env.GCC_32 }} ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }}
+            make -j$(nproc --all) CC=clang O=out ARCH=${{ env.ARCH }} ${{ env.GCC_64 }} ${{ env.GCC_32 }} ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }} ${{ env.EXTRA_CMDT }} ${{ env.EXTRA_CMDU }}
         fi
   
         
