@@ -91,7 +91,7 @@ jobs:
             unzip clang.zip -d clang-aosp/
         fi
 
-    - name: 设置Gcc-aosp编译器
+    - name: 下载Gcc-aosp编译器
       if: env.METHOD_OK == 'A'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
