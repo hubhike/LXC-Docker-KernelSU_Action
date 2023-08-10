@@ -214,7 +214,6 @@ jobs:
         max-size: 2G
 
     - name: 开始编译内核
-      if: env.METHOD_OK == 'A'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         export PATH=$GITHUB_WORKSPACE/kernel_workspace/clang-aosp/bin:$PATH
