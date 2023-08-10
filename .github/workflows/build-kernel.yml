@@ -212,7 +212,7 @@ jobs:
         key: build-kernel-${{ env.DEVICE }}${{ env.UPLOADNAME }}
         max-size: 2G
 
-    - name: 开始A方案编译内核
+    - name: 开始编译内核
       if: env.METHOD_OK == 'A'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
@@ -225,29 +225,7 @@ jobs:
         else
             make -j$(nproc --all) CC=clang O=out ARCH=${{ env.ARCH }} ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }} ${{ env.EXTRA_CMDT }} ${{ env.EXTRA_CMDU }} ${{ env.GCC_64 }} ${{ env.GCC_32 }}
         fi
-        
-        
-        
-        
-    - name: 开始B方案编译内核
-      if: env.METHOD_OK == 'B'
-      run: |
-        cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-        sed -i "s/CONFIG_CC_STACKPROTECTOR_STRONG=y/# CONFIG_CC_STACKPROTECTOR_STRONG is not set/g" arch/arm64/configs/${{ env.KERNEL_CONFIG }}
-        wget https://github.com/wu17481748/LXC-DOCKER-KernelSU_Action/releases/download/%E9%99%84%E4%BB%B6/clangfix2.sh
-        chmod u+x clangfix2.sh
-        ./clangfix2.sh
-        export PATH=$GITHUB_WORKSPACE/kernel_workspace/clang-aosp/bin:$PATH
-        export KBUILD_BUILD_HOST=Github-Action
-        export KBUILD_BUILD_USER=$(echo ${{ github.actor }} | tr A-Z a-z)
-        make -s -j$(nproc --all) O=out ARCH=${{ env.ARCH }} ${{ env.KERNEL_CONFIG }}
-        if [ ${{ env.ENABLE_CCACHE }} = true ]; then
-        make -j$(nproc --all) CC="ccache clang" O=out ARCH=${{ env.ARCH }} ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDT }} ${{ env.EXTRA_CMDU }} CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabi-"
-        else
-        make -j$(nproc --all) CC=clang O=out ARCH=${{ env.ARCH }} ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDT }} ${{ env.EXTRA_CMDU }} CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabi-"
-        fi
-
-        
+  
         
     - name: 检查编译内核生成文件
       run: |
