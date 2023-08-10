@@ -162,6 +162,10 @@ jobs:
        ./runcpatch.sh android-kernel/kernel/cgroup.c               
        fi
        
+       if [ -f android-kernel/kernel/cgroup/cgroup.c ]; then
+       ./runcpatch.sh android-kernel/kernel/cgroup/cgroup.c               
+       fi
+       
        if [ -f android-kernel/net/netfilter/xt_qtaguid.c ]; then
          wget https://github.com/wu17481748/lxc-docker/releases/download/lxc/lxc.patch
          patch -p0 < lxc.patch
