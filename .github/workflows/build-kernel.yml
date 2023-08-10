@@ -106,8 +106,8 @@ jobs:
             echo "GCC_32=CROSS_COMPILE_ARM32=$GITHUB_WORKSPACE/kernel_workspace/gcc-32/bin/arm-linux-androideabi-" >> $GITHUB_ENV
         else
         
-            echo "GCC_64=CROSS_COMPILE="aarch64-linux-gnu-" >> $GITHUB_ENV
-            echo "GCC_64=CROSS_COMPILE_ARM32="arm-linux-gnueabi-" >> $GITHUB_ENV
+            echo "GCC_64=CROSS_COMPILE=aarch64-linux-gnu-" >> $GITHUB_ENV
+            echo "GCC_64=CROSS_COMPILE_ARM32=arm-linux-gnueabi-" >> $GITHUB_ENV
         fi
 
     - name: 下载mkbootimg解包工具
