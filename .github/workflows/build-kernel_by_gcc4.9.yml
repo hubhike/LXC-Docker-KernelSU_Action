@@ -146,8 +146,15 @@ jobs:
         sed -i '/CONFIG_ANDROID_PARANOID_NETWORK/d' arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
         echo "# CONFIG_ANDROID_PARANOID_NETWORK is not set" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
           
-        #sed -i '/CONFIG_LOCALVERSION/d' arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
-        #echo 'CONFIG_LOCALVERSION="-LXC-KernelSU-support_Pdx"' >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+        sed -i '/CONFIG_LOCALVERSION/d' arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+        echo 'CONFIG_LOCALVERSION="-LXC-KVM-support_Pdx"' >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+       
+        #enable kvm
+        echo "CONFIG_VIRTUALIZATION=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+        echo "CONFIG_KVM=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+        echo "CONFIG_VHOST_NET=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+        echo "CONFIG_VHOST_CROSS_ENDIAN_LEGACY=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
+         
           
         chmod +x $GITHUB_WORKSPACE/kernel_workspace/android-kernel/utils/runcpatch.sh
         if [ -f $GITHUB_WORKSPACE/kernel_workspace/android-kernel/kernel/cgroup/cgroup.c ]; then
