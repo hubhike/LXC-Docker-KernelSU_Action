@@ -1,4 +1,4 @@
-本分支 forked from [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_KernelSU_Action)  ，tomxi1997 forked from [xiaoleGun/KernelSU_Action](https://github.com/xiaoleGun/KernelSU_Action)
+本分支 forked from [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_KernelSU_Action)  ，tomxi1997二开优化： [xiaoleGun/KernelSU_Action](https://github.com/xiaoleGun/KernelSU_Action)
 
 # LXC-Docker-KernelSU_Action
 
