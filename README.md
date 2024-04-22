@@ -209,10 +209,14 @@ Build kernel by google-clang10 可选
 | 小米9透明探索版  | xiaomi_cepheus  | 骁龙sdm855  | xiaomi_sm8150 | 
 |  小米6X | xiaomi_wayne  | 骁龙sdm660  | xiaomi_msm8976 Plus | 
 | 小米MIX | xiaomi_lithium | 骁龙sdm821 | xiaomi_msm8996 Pro | 
-| Redmi 9 | xiaomi_lancelot | MTK Helio G80 | - |
-| Redmi 9A | xiaomi_dandelion |MTK Helio G25 | - |
-| RedMi Note8 | xiaomi_ginkgo | 骁龙sdm665 | xiaomi_sm6125 | 
-| Redmi 3S/X | Land （衣恋） | - | - | 
+| Redmi 9 | redmi_lancelot | MTK Helio G80 | redmi_MT6769V/CU |
+| Redmi 9A | redmi_dandelion |MTK Helio G25 | redmi_MT6762G |
+| RedMi Note8 | redmi_ginkgo | 骁龙sdm665 | redmi_sm6125 | 
+| Redmi 3S/X | redmi_land | 骁龙sdm665 | redmi_msm8937 | 
+
+更多：移动端常见芯片名及其对应代号_天玑9200+代号-CSDN博客
+
+https://blog.csdn.net/aaa111/article/details/121532695
 
 ### 如何查看自己的手机型号？
 
