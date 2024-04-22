@@ -178,21 +178,35 @@ LTO 用于优化内核，但有些时候会导致错误
 ## 2、打开Actions开始编译
 
 一般来说只需执行以下3个工作流就够了
+
 Build kernel use Google-git
+
 Build kernel by clang-r416183b1
+
 Build kernel by clang-r383902b
+
 Build kernel by google-clang10 可选
+
 本二改项目，包含18个工作流可同时工作可最大化提高编译内核的成功率，助力LXC,KernelSU 。
+
 工具链集包含AOSP clang ,LLVM, ARM gcc ,SD-clang(高通的llvm工具链）,Proton-clang, Slim-LLVM, ZyC clang,Mandi-Sa-clang,linaro gcc ,Google gcc_4.9 ,Android NDK ,arter97_gcc等
 
 参考视频：
+
 1、利用KernelSU action构建属于自己的KernelSU 内核（非gki机型），无需电脑只需一部手机即可（将就看下）_哔哩哔哩_bilibili
+
 https://www.bilibili.com/video/BV17X4y177Up
+
 2、LXC_KernelSU_Action的项目演示，最大化提高编译内核的成功率，助力LXC,KernelSU 。_哔哩哔哩_bilibili
+
 https://www.bilibili.com/video/BV1Ph4y1v7Bq
+
 3、[编译]构建属于你自己的内核镜像_哔哩哔哩_bilibili
+
 https://www.bilibili.com/video/BV1eH4y1q7pt
+
 4、使用KernelSU_Action编译自己的KernelSU内核_哔哩哔哩_bilibili
+
 https://www.bilibili.com/video/BV1Jo4y1N7eC/
 
 ## 手机型号代号及CPU型号代号参考
