@@ -1,3 +1,5 @@
+forked from https://github.com/wu17481748/LXC-DOCKER-KernelSU_Action
+
 **中文** | [English](README_EN.md)
 
 # LXC-KernelSU Action
