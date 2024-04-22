@@ -193,58 +193,26 @@ Build kernel by google-clang10 可选
 
 参考视频：
 
-1、利用KernelSU action构建属于自己的KernelSU 内核（非gki机型），无需电脑只需一部手机即可（将就看下）_哔哩哔哩_bilibili
+1、利用KernelSU action构建属于自己的KernelSU 内核（非gki机型），无需电脑只需一部手机即可（将就看下）_哔哩哔哩_https://www.bilibili.com/video/BV17X4y177Up
 
-https://www.bilibili.com/video/BV17X4y177Up
+2、LXC_KernelSU_Action的项目演示，最大化提高编译内核的成功率，助力LXC,KernelSU 。_哔哩哔哩_https://www.bilibili.com/video/BV1Ph4y1v7Bq
 
-2、LXC_KernelSU_Action的项目演示，最大化提高编译内核的成功率，助力LXC,KernelSU 。_哔哩哔哩_bilibili
+3、[编译]构建属于你自己的内核镜像_哔哩哔哩_https://www.bilibili.com/video/BV1eH4y1q7pt
 
-https://www.bilibili.com/video/BV1Ph4y1v7Bq
-
-3、[编译]构建属于你自己的内核镜像_哔哩哔哩_bilibili
-
-https://www.bilibili.com/video/BV1eH4y1q7pt
-
-4、使用KernelSU_Action编译自己的KernelSU内核_哔哩哔哩_bilibili
-
-https://www.bilibili.com/video/BV1Jo4y1N7eC/
+4、使用KernelSU_Action编译自己的KernelSU内核_哔哩哔哩_https://www.bilibili.com/video/BV1Jo4y1N7eC/
 
 ## 手机型号代号及CPU型号代号参考
 
-### k20pro
-骁龙sdm855
-xiaomi_sm8150
-xiaomi_raphael
-
-### 小米9透明探索版
-骁龙sdm855
-xiaomi_sm8150
-xiaomi_cepheus
-
-### 小米6X ：
-骁龙sdm660
-xiaomi_msm8976 Plus
-xiaomi_wayne
-
-### 小米MIX
-骁龙sdm821
-xiaomi_msm8996 Pro
-xiaomi_lithium
-
-### Redmi 9
-MTK Helio G80
-xiaomi_lancelot
-
-### Redmi 9A
-MTK Helio G25
-xiaomi_dandelion
-
-### RedMi Note8
-骁龙sdm665
-xiaomi_sm6125
-xiaomi_ginkgo
-
-### Redmi 3S/X：Land （衣恋）
+| 手机型号 | 手机代号 | 处理器型号 | 处理器代号 | 
+| :------------: | :------------: | :------------: | :------------: |
+| k20pro | xiaomi_raphael | 骁龙sdm855| xiaomi_sm8150 |
+| 小米9透明探索版  | xiaomi_cepheus  | 骁龙sdm855  | xiaomi_sm8150 | 
+|  小米6X | xiaomi_wayne  | 骁龙sdm660  | xiaomi_msm8976 Plus | 
+| 小米MIX | xiaomi_lithium | 骁龙sdm821 | xiaomi_msm8996 Pro | 
+| Redmi 9 | xiaomi_lancelot | MTK Helio G80 | - |
+| Redmi 9A | xiaomi_dandelion |MTK Helio G25 | - |
+| RedMi Note8 | xiaomi_ginkgo | 骁龙sdm665 | xiaomi_sm6125 | 
+| Redmi 3S/X | Land （衣恋） | - | - | 
 
 ### 如何查看自己的手机型号？
 
