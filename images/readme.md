@@ -7,9 +7,9 @@
 https://www.123pan.com/s/9uobVv-Nvsod.html 提取码：nXQ9
 
 #### 已保存到本文件夹文件名：
-有ksu：1-mi9-lxc-docker-nethuter
+无ksu：1-mi9-lxc-docker-nethuter
 
-无ksu：1-mi9-lxc-docker-nethuter-ksu
+有ksu：1-mi9-lxc-docker-nethuter-ksu
 
 # 使用第三方rec刷入，系统为crd原生，系统为crd原生，系统为crd原生，未经测试
 
