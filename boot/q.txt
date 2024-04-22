@@ -1,1 +1,24 @@
-此处放置你从原厂系统解包的获取的boot镜像
+# 此处放置你从原厂系统解包的获取的boot镜像
+
+## 本boot来源
+
+[ROM][STABLE]LineageOS 20 [Early Builds][Unofficial] | XDA Forums
+
+https://xdaforums.com/t/rom-stable-lineageos-20-early-builds-unofficial.4529471/
+
+
+kernel：
+
+https://github.com/LineageOS/android_kernel_xiaomi_msm8996
+
+
+ROM：
+
+https://sourceforge.net/projects/yazumiwu/files/Lithium/Lineage20/
+
+
+DEVICE TREE
+
+https://github.com/LineageOS
+
+
