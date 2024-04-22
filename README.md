@@ -186,12 +186,60 @@ Build kernel by google-clang10 可选
 工具链集包含AOSP clang ,LLVM, ARM gcc ,SD-clang(高通的llvm工具链）,Proton-clang, Slim-LLVM, ZyC clang,Mandi-Sa-clang,linaro gcc ,Google gcc_4.9 ,Android NDK ,arter97_gcc等
 
 参考视频：
-| https://www.bilibili.com/video/BV17X4y177Up/ | BV1Ph4y1v7Bq  | BV1eH4y1q7pt  | BV1Jo4y1N7eC
+1、利用KernelSU action构建属于自己的KernelSU 内核（非gki机型），无需电脑只需一部手机即可（将就看下）_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV17X4y177Up
+2、LXC_KernelSU_Action的项目演示，最大化提高编译内核的成功率，助力LXC,KernelSU 。_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1Ph4y1v7Bq
+3、[编译]构建属于你自己的内核镜像_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1eH4y1q7pt
+4、使用KernelSU_Action编译自己的KernelSU内核_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1Jo4y1N7eC/
 
+## 手机型号代号及CPU型号代号参考
 
+### k20pro
+骁龙sdm855
+xiaomi_sm8150
+xiaomi_raphael
 
+### 小米9透明探索版
+骁龙sdm855
+xiaomi_sm8150
+xiaomi_cepheus
 
+### 小米6X ：
+骁龙sdm660
+xiaomi_msm8976 Plus
+xiaomi_wayne
 
+### 小米MIX
+骁龙sdm821
+xiaomi_msm8996 Pro
+xiaomi_lithium
+
+### Redmi 9
+MTK Helio G80
+xiaomi_lancelot
+
+### Redmi 9A
+MTK Helio G25
+xiaomi_dandelion
+
+### RedMi Note8
+骁龙sdm665
+xiaomi_sm6125
+xiaomi_ginkgo
+
+### Redmi 3S/X：Land （衣恋）
+
+### 如何查看自己的手机型号？
+
+MT文件管理器-进入System文件夹-找到build.prop这个文件打开
+ro.product.name=lmi
+ro.product.device=lmi
+ro.rom.jxdh=lmi
+ro.product.mod_device=lmi
+这几行代码的末尾，就是机型代号
 
 
 ## 感谢
@@ -200,7 +248,8 @@ Build kernel by google-clang10 可选
 - [AOSP](https://android.googlesource.com)
 - [KernelSU](https://github.com/tiann/KernelSU)
 - [xiaoxindada](https://github.com/xiaoxindada)
-- [xiaoleGun](https://github.com/xiaoleGun/KernelSU_Action) 
+- [xiaoleGun](https://github.com/xiaoleGun/KernelSU_Action)
+- [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_KernelSU_Action)
 - [qiuqiu](https://blog.qiuqiu233.top/)
 - [grilix](https://github.com/grilix/kernel-docker-support)
 - [wu17481748](https://github.com/wu17481748/LXC-DOCKER-KernelSU_Action)
