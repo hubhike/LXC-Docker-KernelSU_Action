@@ -1,4 +1,4 @@
-forked from https://github.com/tomxi1997/LXC-DOCKER-KernelSU_Action
+forked from [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_KernelSU_Action)  forked from [xiaoleGun/KernelSU_Action](https://github.com/xiaoleGun/KernelSU_Action)
 
 **中文** | [English](README_EN.md)
 
