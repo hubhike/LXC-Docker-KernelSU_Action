@@ -1,8 +1,6 @@
-forked from [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_KernelSU_Action)  forked from [xiaoleGun/KernelSU_Action](https://github.com/xiaoleGun/KernelSU_Action)
+本分支 forked from [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_KernelSU_Action)  ，tomxi1997 forked from [xiaoleGun/KernelSU_Action](https://github.com/xiaoleGun/KernelSU_Action)
 
-**中文** | [English](README_EN.md)
-
-# LXC-KernelSU Action
+# LXC-Docker-KernelSU_Action
 
 用于 Non-GKI Kernel 的 Action，具有一定的普遍性，需要了解内核及 Android 的相关知识得以运用。
 
@@ -17,7 +15,11 @@ forked from [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_Ker
 - `4.14`
 - `4.9`
 
-## 使用
+# 使用方法：
+
+## 1、修改config.env 文件
+
+###（一般如果只需要lxc,修改第12～30行内容即可）提交，run。
 
 > 所有 config.env 内的变量均只判断`true`
 
@@ -171,6 +173,26 @@ LTO 用于优化内核，但有些时候会导致错误
 故名思义，提供一个源系统可以正常开机的 boot 镜像，需要直链，最好是同一套内核源码以及与你当前系统同一套设备树从 aosp 构建出来的。ramdisk 里面包含分区表以及 init，没有的话构建出来的镜像会无法正常引导。
 
 例如: https://raw.githubusercontent.com/xiaoleGun/KernelSU_action/main/boot/boot-wayne-from-Miku-UI-latest.img
+
+
+## 2、打开Actions开始编译
+
+一般来说只需执行以下3个工作流就够了
+Build kernel use Google-git
+Build kernel by clang-r416183b1
+Build kernel by clang-r383902b
+Build kernel by google-clang10 可选
+本二改项目，包含18个工作流可同时工作可最大化提高编译内核的成功率，助力LXC,KernelSU 。
+工具链集包含AOSP clang ,LLVM, ARM gcc ,SD-clang(高通的llvm工具链）,Proton-clang, Slim-LLVM, ZyC clang,Mandi-Sa-clang,linaro gcc ,Google gcc_4.9 ,Android NDK ,arter97_gcc等
+
+参考视频：
+| https://www.bilibili.com/video/BV17X4y177Up/ | BV1Ph4y1v7Bq  | BV1eH4y1q7pt  | BV1Jo4y1N7eC
+
+
+
+
+
+
 
 ## 感谢
 
