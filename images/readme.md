@@ -6,7 +6,11 @@
 ### 内核链接:
 miui12.5:https://www.123pan.com/s/9uobVv-B3sod.html 提取码：kT0Y
 
+本文件夹文件名：redmi_k20pro-miui12.5-lxc-docker.zip
+
 pe系统:https://www.123pan.com/s/9uobVv-J3sod.html 提取码：isBu
+
+本文件夹文件名：redmi_k20pro-lxc-docker-pe.zip
 
 使用第三方rec刷入,刷之前备份boot，未经测试
 
