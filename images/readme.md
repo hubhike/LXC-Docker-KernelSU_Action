@@ -18,3 +18,6 @@ miui12.5:      https://github.com/F1xy-kernels/RAPHAEL_Kernel
 原生pe:        https://github.com/PixelExperience-Devices/kernel_xiaomi_raphael
 
 一键添加lxc-docker配置的项目(感谢大佬的付出):https://hub.xb6868.com/tomxi1997/lxc-docker-support-for-android
+
+## 2F
+待完善
