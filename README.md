@@ -1,6 +1,5 @@
-本分支 forked from [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_KernelSU_Action)  ，tomxi1997 forked from [xiaoleGun/KernelSU_Action](https://github.com/xiaoleGun/KernelSU_Action)
-
-# LXC-Docker-KernelSU_Action
+# LXC-DOCKER-KernelSU_Action_wu17481748
+Fork https://github.com/wu17481748/LXC-DOCKER-KernelSU_Action
 
 用于 Non-GKI Kernel 的 Action，具有一定的普遍性，需要了解内核及 Android 的相关知识得以运用。
 
@@ -15,11 +14,7 @@
 - `4.14`
 - `4.9`
 
-# 使用方法：
-
-## 1、修改config.env 文件
-
-###（一般如果只需要lxc,修改第12～30行内容即可）提交，run。
+## 使用
 
 > 所有 config.env 内的变量均只判断`true`
 
@@ -78,9 +73,10 @@ Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之�
 由于 [#23](https://github.com/xiaoleGun/KernelSU_Action/issues/23) 的需要，我们提供可自定义 Google 上游分支的选项，主要的有分支有
 | Clang 分支 |
 | ---------- |
-| master |
-| master-kernel-build-2021 |
-| master-kernel-build-2022 |
+| main |
+| android-gs-bluejay-5.10-android13 |
+| android-msm-bonito-4.9-android12-qpr1 |
+| android-msm-coral-4.14-android13 |
 
 或者其它分支，请根据自己的需求在 https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 中寻找
 
@@ -126,16 +122,6 @@ Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之�
 - 最新 TAG(稳定版): `KERNELSU_TAG=`
 - 指定 TAG(如`v0.5.2`): `KERNELSU_TAG=v0.5.2`
 
-#### KernelSU Manager signature size and hash
-
-自定义KernelSU管理器签名的size值和hash值，如果不需要自定义管理器则请留空或填入官方默认值：
-
-`KSU_EXPECTED_SIZE=0x033b`
-
-`KSU_EXPECTED_HASH=0xb0b91415`
-
-可键入`ksud debug get-sign <apk_path>`获取apk签名的size值和hash值
-
 ### Disable LTO
 
 LTO 用于优化内核，但有些时候会导致错误
@@ -174,80 +160,9 @@ LTO 用于优化内核，但有些时候会导致错误
 
 例如: https://raw.githubusercontent.com/xiaoleGun/KernelSU_action/main/boot/boot-wayne-from-Miku-UI-latest.img
 
-
-## 2、打开Actions开始编译
-
-一般来说只需执行以下3个工作流就够了
-
-Build kernel use Google-git
-
-Build kernel by clang-r416183b1
-
-Build kernel by clang-r383902b
-
-Build kernel by google-clang10 可选
-
-本二改项目，包含18个工作流可同时工作可最大化提高编译内核的成功率，助力LXC,KernelSU 。
-
-工具链集包含AOSP clang ,LLVM, ARM gcc ,SD-clang(高通的llvm工具链）,Proton-clang, Slim-LLVM, ZyC clang,Mandi-Sa-clang,linaro gcc ,Google gcc_4.9 ,Android NDK ,arter97_gcc等
-
-参考视频：
-
-1、利用KernelSU action构建属于自己的KernelSU 内核（非gki机型），无需电脑只需一部手机即可（将就看下）_哔哩哔哩_https://www.bilibili.com/video/BV17X4y177Up
-
-2、LXC_KernelSU_Action的项目演示，最大化提高编译内核的成功率，助力LXC,KernelSU 。_哔哩哔哩_https://www.bilibili.com/video/BV1Ph4y1v7Bq
-
-3、[编译]构建属于你自己的内核镜像_哔哩哔哩_https://www.bilibili.com/video/BV1eH4y1q7pt
-
-4、使用KernelSU_Action编译自己的KernelSU内核_哔哩哔哩_https://www.bilibili.com/video/BV1Jo4y1N7eC/
-
-## 手机型号代号及CPU型号代号参考
-
-| 手机型号 | 手机代号 | 处理器型号 | 处理器代号 | 
-| :------------: | :------------: | :------------: | :------------: |
-| k20pro | xiaomi_raphael | 骁龙sdm855| xiaomi_sm8150 |
-| 小米9透明探索版  | xiaomi_cepheus  | 骁龙sdm855  | xiaomi_sm8150 | 
-|  小米6X | xiaomi_wayne  | 骁龙sdm660  | xiaomi_msm8976 Plus | 
-| 小米MIX | xiaomi_lithium | 骁龙sdm821 | xiaomi_msm8996 Pro | 
-| Redmi 9 | xiaomi_lancelot | MTK Helio G80 | - |
-| Redmi 9A | xiaomi_dandelion |MTK Helio G25 | - |
-| RedMi Note8 | xiaomi_ginkgo | 骁龙sdm665 | xiaomi_sm6125 | 
-| Redmi 3S/X | Land （衣恋） | - | - | 
-
-### 如何查看自己的手机型号？
-
-MT文件管理器-进入System文件夹-找到build.prop这个文件打开
-
-ro.product.name=lmi
-
-ro.product.device=lmi
-
-ro.rom.jxdh=lmi
-
-ro.product.mod_device=lmi
-
-这几行代码的末尾，就是机型代号
-
-
 ## 感谢
 
 - [AnyKernel3](https://github.com/osm0sis/AnyKernel3)
 - [AOSP](https://android.googlesource.com)
 - [KernelSU](https://github.com/tiann/KernelSU)
 - [xiaoxindada](https://github.com/xiaoxindada)
-- [xiaoleGun](https://github.com/xiaoleGun/KernelSU_Action)
-- [tomxi1997/LXC_KernelSU_Action](https://github.com/tomxi1997/LXC_KernelSU_Action)
-- [qiuqiu](https://blog.qiuqiu233.top/)
-- [grilix](https://github.com/grilix/kernel-docker-support)
-- [wu17481748](https://github.com/wu17481748/LXC-DOCKER-KernelSU_Action)
-- [kdrag0n](https://github.com/kdrag0n/proton-clang)
-- [JonasCardoso](https://github.com/JonasCardoso/Toolchain)
-- [Neebe3289](https://gitlab.com/Neebe3289/android_prebuilts_clang_host_linux-x86)
-- [ZyCromerZ](https://github.com/ZyCromerZ/Clang)
-- [ARM](https://developer.arm.com/-/media/Files/downloads/gnu)
-- [LLVM](https://github.com/llvm/llvm-project/)
-- [mvaisakh](https://github.com/mvaisakh/gcc-build)
-- [HDTC](https://gitlab.com/HDTC/sdclang)
-- [Neutron-Toolchains](https://github.com/Neutron-Toolchains)
-- [kali](https://kali.download/nethunter-images/toolchains/)
-- [Mandi-Sa](https://github.com/Mandi-Sa/clang/)
