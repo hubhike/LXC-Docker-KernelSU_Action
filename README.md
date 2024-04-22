@@ -217,10 +217,15 @@ Build kernel by google-clang10 可选
 ### 如何查看自己的手机型号？
 
 MT文件管理器-进入System文件夹-找到build.prop这个文件打开
+
 ro.product.name=lmi
+
 ro.product.device=lmi
+
 ro.rom.jxdh=lmi
+
 ro.product.mod_device=lmi
+
 这几行代码的末尾，就是机型代号
 
 
