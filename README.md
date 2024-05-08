@@ -236,6 +236,7 @@ ro.product.mod_device=lmi
 
 https://github.com/MiCode/Xiaomi_Kernel_OpenSource
 
+或查看：https://github.com/hubhike/LXC-Docker-KernelSU_Action/blob/main/README.md
 
 | Branch | Device | Android version | Base tag | Link |
 | :-: | :-: | :-: | :-: | :-: |
