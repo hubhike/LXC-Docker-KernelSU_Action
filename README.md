@@ -232,7 +232,7 @@ ro.product.mod_device=lmi
 
 这几行代码的末尾，就是机型代号
 
-### miui官方源码地址
+### miui官方源码地址          列表向左拉动-查看对应地址（被挡住了）
 
 https://github.com/MiCode/Xiaomi_Kernel_OpenSource
 
