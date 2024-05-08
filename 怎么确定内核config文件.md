@@ -12,13 +12,13 @@ KERNEL_IMAGE_NAME可能的取值有Image.gz-dtb,Image.gz,Image等
 
 如：device_xiaomi_wayne
 
-![](https://github.com/hubhike/LXC-Docker-KernelSU_Action/raw/main/pic/01.jpg)
+![](https://github.com/hubhike/LXC-Docker-KernelSU_Action/raw/main/help/%E6%80%8E%E4%B9%88%E6%89%BE%E5%88%B0%E8%AE%BE%E5%A4%87%E5%86%85%E6%A0%B8%E7%9A%84config%E6%96%87%E4%BB%B6/01.jpg)
 
 ### 它的文件为：https://github.com/LineageOS-wayne/android_device_xiaomi_wayne/blob/lineage-20.0/BoardConfig.mk
 
 在Board config文件中可找到kernel name
 
-![](https://github.com/hubhike/LXC-Docker-KernelSU_Action/raw/main/pic/02.jpg)
+![](https://github.com/hubhike/LXC-Docker-KernelSU_Action/raw/main/help/%E6%80%8E%E4%B9%88%E6%89%BE%E5%88%B0%E8%AE%BE%E5%A4%87%E5%86%85%E6%A0%B8%E7%9A%84config%E6%96%87%E4%BB%B6/02.jpg)
 
 
 ## 对应的，deconfig亦可，只要找仔细点就行
@@ -31,10 +31,10 @@ KERNEL_IMAGE_NAME可能的取值有Image.gz-dtb,Image.gz,Image等
 
 
 
-怎么确定内核config文件 - 哔哩哔哩
+怎么确定内核config文件
 
-https://www.bilibili.com/read/cv32443301/?jump_opus=1
+https://www.bilibili.com/read/cv32443301
 
-使用kernelSU action-小白纯经验之谈 - 哔哩哔哩
+使用kernelSU action-小白纯经验之谈
 
-https://www.bilibili.com/read/cv29444447/?jump_opus=1
+https://www.bilibili.com/read/cv29444447
